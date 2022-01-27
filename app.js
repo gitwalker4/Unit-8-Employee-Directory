@@ -1,6 +1,6 @@
 //// Global Variables
 let employees = [];
-const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob &noinfo &nat=US`
+const urlAPI = `https://randomuser.me/api/?results=12&inc=name, picture, email, location, phone, dob &noinfo &nat=US`;
 const gridContainer = document.querySelector(".grid-container");
 const overlay = document.querySelector(".overlay");
 const modalContainer = document.querySelector(".modal-content");
@@ -12,7 +12,7 @@ fetch(urlAPI)
   .then(res => res.json())
   .then(res => res.results)
   .then(displayEmployees)
-  .catch(err => console.log(err))
+  .catch(err => console.log(err));
 
 // Generate Employee Data
 function displayEmployees(employeeData) {
@@ -36,7 +36,7 @@ function displayEmployees(employeeData) {
           <p class="address">${city}</p>
         </div>
       </div>
-    `
+    `;
   });
   
   gridContainer.innerHTML = employeeHTML;
@@ -72,14 +72,14 @@ gridContainer.addEventListener('click', e => {
   if (e.target !== gridContainer) {
     const card = e.target.closest(".card");
     const index = card.getAttribute('data-index');
-    liveModal = index;
+    liveModal = parseInt(index);
     displayModal(index);
   }
 });
 
 modalClose.addEventListener('click', () => {
   overlay.classList.add("hidden");
-})
+});
 
 // Search Method 
 const searchBar = document.getElementById('search');

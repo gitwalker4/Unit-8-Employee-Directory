@@ -139,7 +139,7 @@ header h1 {
 
 .modal-content .text-container {
   display: grid;
-  grid-template-rows: 30px 25px 40px 25px repeat(3, 35px);
+  grid-template-rows: 30px 23px 40px 25px repeat(3, 35px);
 }
 
 
