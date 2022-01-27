@@ -72,6 +72,7 @@ gridContainer.addEventListener('click', e => {
   if (e.target !== gridContainer) {
     const card = e.target.closest(".card");
     const index = card.getAttribute('data-index');
+    liveModal = index;
     displayModal(index);
   }
 });
